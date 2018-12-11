@@ -1,0 +1,165 @@
+//系统主题变量
+@fontColor: #303133;
+@borderColor: #ebeef5;
+@themeColor: #3498DB; //主题色
+@themeFontColor: #ffffff; //主题字体色
+@themeHoverColor: shade(@themeColor, 15%); //主题焦点色
+@infoThemeColor: #90949a; //信息主题色
+@infoThemeFontColor: #ffffff;
+@infoThemeHoverColor: #90949a;
+@successThemeColor: #80be57; //成功主题色
+@successThemeFontColor: #ffffff;
+@successThemeHoverColor: #80be57;
+@warningThemeColor: #dba358; //警告主题色
+@warningThemeFontColor: #ffffff;
+@warningThemeHoverColor: #dba358;
+@errorThemeColor: #e37472; //错误主题色
+@errorThemeFontColor: #ffffff;
+@errorThemeHoverColor: #e37472;
+//边框
+.baseBorder() {
+    border: 1px @borderColor solid;
+}
+
+.baseBorder(@direction, @borderWidth:1px, @color:@borderColor) {
+    border@{direction}: @borderWidth @color solid;
+}
+
+.baseBorderHover() {
+    border: 1px @themeHoverColor solid;
+}
+
+.baseBorderHover(@direction, @borderWidth:1px, @color:@themeHoverColor) {
+    .baseBorder(@direction,@borderWidth,@color);
+}
+//阴影
+
+.shadow() {
+    -webkit-box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    -ms-box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    -o-box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.smallShadow() {
+    -webkit-box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    -ms-box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    -o-box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.bigShadow() {
+    -webkit-box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+    -ms-box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+    -o-box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+}
+.deleteBtn{
+    color: #D90057;
+    font-size:14px;
+}
+.addBtn{
+    color: @themeColor;
+    font-size:14px;
+}
+.deleteBtn:focus{
+  color: #D90057;
+  border-color: #dcdfe6;
+  background-color: #ffffff;
+}
+
+.deleteBtn:hover {
+    color: #D90057;
+    border-color: #c6e2ff;
+    background-color: #ecf5ff;
+}
+.el-button--primary{
+    background:#3498DB;
+}
+.backBtn{
+    width:80px;
+    height:24px;
+    padding: 0 !important;
+    font-size: 12px;
+    margin-top:6px;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.breadcrumbArea{
+    width:100%;
+    height:36px;
+    line-height: 36px;
+    font-size: 14px;
+    clear: both;
+}
+.el-textarea__inner{
+  resize: none;
+}
+// 表格区域
+.el-table th>.cell{
+    color:#000;
+}
+.el-button span{
+    cursor: pointer !important;
+}
+//分页区域
+.pageBox{
+    .el-pager li.active+li {
+        border-left: solid 1px rgba(224, 227, 233, 1);
+    }
+    .number {
+        width: 32px;
+        height: 32px;
+        border: solid 1px rgba(224, 227, 233, 1);
+        border-radius: 3px;
+        margin-right: 12px;
+        &.active {
+            background-color: rgba(0, 144, 255, 1);
+            color: #ffffff;
+        }
+    }
+}
+//弹框样式
+.el-dialog__title{
+    font-weight: bold !important;
+}
+.el-message-box__title{
+    font-weight: bold;
+}
+.dialog-footer .el-button{
+    font-weight: bold;
+}
+.el-message-box__btns .el-button{
+    font-weight: bold;
+}
+//表单
+.el-form-item__label{
+    font-weight: bold;
+}
+.is-on{
+    .el-upload-list__item-name{
+        color:@themeColor!important;
+        font-weight:bold!important;
+    }
+}
+.el-upload-list{
+    max-height: 450px;
+    // min-height: 450px;
+    // border: 1px solid @borderColor;
+    // border-bottom:0;
+    background: #F8F8F8;
+    margin-top: 10px;
+    overflow-y: auto;
+    .el-upload-list__item{
+        border-bottom: 1px solid @borderColor;
+        padding-bottom:10px;
+    }
+    .el-upload-list__item:hover{
+        .el-upload-list__item-name{
+            color:@themeColor!important;
+            font-weight:bold!important;
+        }
+        
+    }
+}
